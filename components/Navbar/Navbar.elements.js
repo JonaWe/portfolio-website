@@ -8,8 +8,8 @@ export const Nav = styled.nav`
   left: 0;
   top: 0;
   z-index: 100;
-  ${'' /* background: ${({ theme }) => theme.backgroundPrimary}; */}
-  background: rgba(0, 0, 0, 0.7);
+  background: ${({ theme }) => theme.backgroundPrimary};
+  ${'' /* background: rgba(0, 0, 0, 0.7); */}
   color: ${({ theme }) => theme.fontColorPrimary};
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
   list-style-type: none;
@@ -17,7 +17,7 @@ export const Nav = styled.nav`
   justify-content: center;
   column-gap: 1em;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     background: none;
     box-shadow: none;
   }
@@ -26,7 +26,7 @@ export const Nav = styled.nav`
 export const MobileMenu = styled.div`
   display: none;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -45,7 +45,7 @@ export const MobileMenu = styled.div`
 export const MobileIcon = styled(FontAwesomeIcon)`
   display: none;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
@@ -78,7 +78,7 @@ export const BlockLink = styled.a`
   &:active {
     border: red;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;

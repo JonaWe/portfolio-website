@@ -14,6 +14,7 @@ export const FooterBox = styled.footer`
     'social sitemap contact'
     'copy copy copy';
   align-items: center;
+  grid-gap: 1.5em;
   a:hover {
     transition: all 0.1s ease-in-out;
     color: ${({ theme }) => theme.fontColorAccent};
@@ -26,8 +27,6 @@ export const FooterBox = styled.footer`
       'contact'
       'social'
       'copy';
-    align-items: center !important;
-    justify-items: center !important;
   }
 `;
 
@@ -40,15 +39,24 @@ export const SocialArea = styled.div`
   grid-area: social;
   justify-self: end;
   display: grid;
+
+  @media screen and (max-width: 768px) {
+    justify-self: center;
+    grid-gap: 0.75em;
+    grid-auto-flow: column;
+  }
 `;
 
 export const SiteMapArea = styled.div`
+  width: 100%;
   grid-area: sitemap;
-  justify-self: center;
+  justify-self: start;
   align-self: start;
-  margin-bottom: 1em;
   display: grid;
   grid-gap: 0.5em;
+  a {
+    display: inline-block;
+  }
 `;
 
 export const ContactArea = styled.address`
@@ -58,8 +66,12 @@ export const ContactArea = styled.address`
 export const Title = styled.h3`
   font-style: normal;
   color: ${({ theme }) => theme.fontColorAccent};
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Hr = styled.hr`
+  margin-bottom: 1.75em;
   border-color: ${(props) => props.theme.fontColorPrimary};
 `;

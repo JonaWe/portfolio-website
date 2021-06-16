@@ -28,9 +28,9 @@ export const ProjectCard = styled.div`
   max-width: 300px;
   min-height: 400px;
   border-radius: 30px;
-  ${'' /* img { */}
-  ${'' /* border-radius: 29px 29px 0 0; */}
-  ${'' /* } */}
+  img {
+    border-radius: 28px 28px 0 0;
+  }
 `;
 
 export const ProjectInfo = styled.div`
