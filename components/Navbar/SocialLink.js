@@ -4,10 +4,12 @@ import styled from 'styled-components';
 
 const Link = styled.a`
   font-size: 2em;
-  transition: color 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   color: white;
   &:hover {
+    transition: all 0.1s ease-in-out;
     color: LightSeaGreen;
+    transform: scale(1.2);
   }
 `;
 export default function SocialLink({ href, icon }) {
