@@ -4,7 +4,9 @@ export const Nav = styled.nav`
   position: sticky;
   left: 0;
   top: 0;
-  background: ${({ theme }) => theme.backgroundPrimary};
+  z-index: 100;
+  ${'' /* background: ${({ theme }) => theme.backgroundPrimary}; */}
+  background: rgba(0, 0, 0, 0.7);
   color: ${({ theme }) => theme.fontColorPrimary};
   list-style-type: none;
   display: flex;

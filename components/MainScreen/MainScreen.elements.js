@@ -15,7 +15,7 @@ export const Title = styled.h1`
   margin-bottom: 0;
 `;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled.p`
   font-size: 2.25em;
   margin: 0 0 0.75em 0;
 `;
