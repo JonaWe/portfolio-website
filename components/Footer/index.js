@@ -8,7 +8,9 @@ import {
   Title,
   ContactArea,
   CopyrightArea,
+  Hr,
 } from './Footer.elements';
+import { navElements } from '../Navbar';
 
 export default function Footer() {
   return (
@@ -23,18 +25,11 @@ export default function Footer() {
 
       <SiteMapArea>
         <Title>Sitemap</Title>
-        <Link href="/home">
-          <a>Home</a>
-        </Link>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-        <Link href="/bla">
-          <a>Langer Text</a>
-        </Link>
+        {navElements.map(({ name, link }) => (
+          <Link key={link} href={link}>
+            <a>{name}</a>
+          </Link>
+        ))}
       </SiteMapArea>
       <ContactArea>
         <Title>Contact</Title>
@@ -43,7 +38,7 @@ export default function Footer() {
       </ContactArea>
 
       <CopyrightArea>
-        <hr />
+        <Hr />
         <p>Copyright &copy; 2021 Jona Wessendorf. All rights reserved.</p>
       </CopyrightArea>
     </FooterBox>

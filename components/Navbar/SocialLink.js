@@ -5,10 +5,10 @@ import styled from 'styled-components';
 const Link = styled.a`
   font-size: 2em;
   transition: all 0.1s ease-in-out;
-  color: white;
+  color: ${({ theme }) => theme.fontColorPrimary};
   &:hover {
     transition: all 0.1s ease-in-out;
-    color: LightSeaGreen;
+    color: ${({ theme }) => theme.fontColorAccent};
     transform: scale(1.2);
   }
 `;

@@ -4,8 +4,8 @@ export const FooterBox = styled.footer`
   padding: 0.5em;
   width: 100%;
 
-  background: #131313;
-  color: white;
+  background: ${({ theme }) => theme.backgroundPrimary};
+  color: ${({ theme }) => theme.fontColorPrimary};
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -14,6 +14,10 @@ export const FooterBox = styled.footer`
     'social sitemap contact'
     'copy copy copy';
   align-items: center;
+  a:hover {
+    transition: all 0.1s ease-in-out;
+    color: ${({ theme }) => theme.fontColorAccent};
+  }
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
@@ -53,5 +57,9 @@ export const ContactArea = styled.address`
 
 export const Title = styled.h3`
   font-style: normal;
-  color: LightSeaGreen;
+  color: ${({ theme }) => theme.fontColorAccent};
+`;
+
+export const Hr = styled.hr`
+  border-color: ${(props) => props.theme.fontColorPrimary};
 `;

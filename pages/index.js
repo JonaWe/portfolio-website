@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Title = styled.h1`
   font-size: 50px;
-  color: black;
+  color: ${({ theme }) => theme.fontColorPrimary};
 `;
 
 export default function Home() {

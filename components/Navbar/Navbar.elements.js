@@ -4,7 +4,8 @@ export const Nav = styled.nav`
   position: sticky;
   left: 0;
   top: 0;
-  background: #eee;
+  background: ${({ theme }) => theme.backgroundPrimary};
+  color: ${({ theme }) => theme.fontColorPrimary};
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -19,9 +20,13 @@ export const BlockLink = styled.a`
   display: block;
   padding: 0.5em 1em;
   font-weight: normal;
-  transition: font-weight 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:hover {
     cursor: pointer;
     font-weight: bolder;
+    color: ${({ theme }) => theme.fontColorAccent};
+  }
+  &:active {
+    border: red;
   }
 `;
