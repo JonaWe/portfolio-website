@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   list-style-type: none;
   display: flex;
   justify-content: center;
-  column-gap: 2em;
+  column-gap: 1em;
 `;
 
 export const Item = styled.li`
@@ -18,7 +18,7 @@ export const Item = styled.li`
 
 export const BlockLink = styled.a`
   display: block;
-  padding: 0.5em 1em;
+  padding: 0.75em 1.5em;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
   &:hover {

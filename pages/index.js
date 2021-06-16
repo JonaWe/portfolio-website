@@ -2,18 +2,16 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 import styled from 'styled-components';
+import MainScreen from '../components/MainScreen';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.fontColorPrimary};
-`;
+const MainWrapper = styled.div``;
 
 export default function Home() {
   return (
-    <>
+    <MainWrapper>
       <Navbar />
-      <Title>Hey</Title>
+      <MainScreen />
       <Footer />
-    </>
+    </MainWrapper>
   );
 }

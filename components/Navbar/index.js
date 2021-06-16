@@ -24,8 +24,4 @@ export const navElements = [
     name: 'Contact',
     link: '/contact',
   },
-  {
-    name: 'Langer Text',
-    link: '/test',
-  },
 ];
