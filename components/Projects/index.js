@@ -4,7 +4,7 @@ import { Title, ViewBox, ProjectList } from './Projects.elements';
 
 export default function Projects({ projectList }) {
   return (
-    <ViewBox>
+    <ViewBox id="projects">
       <Title>Projects</Title>
       <ProjectList>
         {projectList.map(({ name, image, description, url }) => (

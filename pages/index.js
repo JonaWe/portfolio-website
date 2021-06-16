@@ -5,6 +5,8 @@ import MainScreen from '../components/MainScreen';
 import projectList from '../lib/projectList';
 
 import styled from 'styled-components';
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 const MainWrapper = styled.div``;
 
@@ -13,7 +15,9 @@ export default function Home({ projectList }) {
     <MainWrapper>
       <Navbar />
       <MainScreen />
+      <About />
       <Projects projectList={projectList} />
+      <Contact />
       <Footer />
     </MainWrapper>
   );

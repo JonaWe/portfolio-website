@@ -8,8 +8,8 @@ import {
 
 export default function Project({ name, description, url, image }) {
   return (
-    <ProjectCard>
-      <Image src={image} width={400} height={400} />
+    <ProjectCard imageUrl={image}>
+      {/* <Image src={image} width={400} height={400} /> */}
       <ProjectInfo>
         <ProjectTitle>{name}</ProjectTitle>
       </ProjectInfo>

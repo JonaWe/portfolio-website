@@ -9,20 +9,20 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 100;
   background: ${({ theme }) => theme.backgroundPrimary};
-  ${'' /* background: rgba(0, 0, 0, 0.7); */}
   color: ${({ theme }) => theme.fontColorPrimary};
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
   list-style-type: none;
   display: flex;
   justify-content: center;
   column-gap: 1em;
-
-  @media screen and (max-width: 768px) {
-    background: none;
-    box-shadow: none;
-  }
+  ${'' /* border-bottom: 3px solid ${({ theme }) => theme.fontColorAccent}; */}
 `;
 
+// @media screen and (max-width: 768px) {
+//   background: ${({ theme }) => theme.backgroundPrimary};
+//   ${'' /* background: none; */}
+//   ${'' /* box-shadow: none; */}
+// }
 export const MobileMenu = styled.div`
   display: none;
 
@@ -32,12 +32,14 @@ export const MobileMenu = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     top: 0;
     left: 0;
     position: absolute;
     background: ${({ theme }) => theme.fontColorAccent};
+    color: ${({ theme }) => theme.backgroundPrimary};
+    font-size: 1.25em;
     z-index: 9999;
   }
 `;
@@ -65,6 +67,12 @@ export const Item = styled.li`
   background: none;
 `;
 
+export const MobileLinkList = styled.ul`
+  padding: 0;
+  display: grid;
+  grid-gap: 1em;
+`;
+
 export const BlockLink = styled.a`
   display: block;
   padding: 0.75em 1.5em;
@@ -72,11 +80,10 @@ export const BlockLink = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     cursor: pointer;
-    font-weight: bolder;
     color: ${({ theme }) => theme.fontColorAccent};
   }
   &:active {
-    border: red;
+    border-bottom: 3px solid ${({ theme }) => theme.fontColorAccent};
   }
   @media screen and (max-width: 768px) {
     display: none;
