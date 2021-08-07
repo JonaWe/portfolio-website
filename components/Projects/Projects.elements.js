@@ -42,14 +42,14 @@ export const ProjectInfo = styled.div`
 `;
 
 export const ProjectTitle = styled.h3`
-  &:hover::before {
-    content: '< ';
-    color: ${({ theme }) => theme.fontColorAccent};
-  }
-  &:hover::after {
-    content: ' />';
-    color: ${({ theme }) => theme.fontColorAccent};
-  }
+  position: relative;
+  left: 5px;
+`;
+
+export const ProjectTitlePseudo = styled.span`
+  color: ${({ theme }) => theme.fontColorAccent};
+  opacity: ${(props) => (props.hovered ? '100%' : '0')};
+  transition: opacity 0.15s ease-in-out;
 `;
 
 export const ProjectDescription = styled.p`
