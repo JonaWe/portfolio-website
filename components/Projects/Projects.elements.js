@@ -15,6 +15,9 @@ export const ProjectList = styled.div`
   grid-gap: 1em;
   grid-template-columns: 1fr 1fr;
 
+  align-items: center;
+  justify-items: center;
+
   @media screen and (max-width: 480px) {
     grid-template-columns: 1fr;
   }
@@ -26,6 +29,7 @@ export const ProjectCard = styled.div`
   text-align: center;
 
   max-width: 300px;
+  min-width: 300px;
   min-height: 400px;
   border-radius: 30px;
 

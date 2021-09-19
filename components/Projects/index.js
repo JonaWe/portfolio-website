@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import Project from './Project';
 
 import { Title, ViewBox, ProjectList } from './Projects.elements';
 
 export default function Projects({ projectList }) {
+  const [hovered, setHovered] = useState();
   return (
     <ViewBox id="projects">
-      <Title>Projects</Title>
+      <Title
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        &lt;Projects{hovered && ' limit={4}'}&gt;
+      </Title>
       <ProjectList>
         {projectList.map(({ name, image, description, url }) => (
           <Project
@@ -17,6 +24,7 @@ export default function Projects({ projectList }) {
           />
         ))}
       </ProjectList>
+      <Title>&lt;/Projects&gt;</Title>
     </ViewBox>
   );
 }
